@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="Dark_ARPG"
+run/main_scene="uid://d5p5g62curuj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 PassiveGraph="*uid://cji1spym1omvg"
+Dialogue="*uid://c74x7kimxcr1p"
 
 [physics]
 
