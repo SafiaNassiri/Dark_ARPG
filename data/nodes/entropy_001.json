@@ -1,0 +1,16 @@
+{
+  "id": "entropy_001",
+  "display_name": "The Unravelling",
+  "cluster": "entropy",
+  "lore_text": "The third artificers did not fall. They chose to come apart.",
+  "connected_ids": ["entropy_002"],
+  "contradiction_ids": ["order_001"],
+  "position": { "x": 120, "y": 340 },
+  "stat_modifiers": [
+    { "stat": "cast_speed", "value": 0.15, "mode": "add" },
+    { "stat": "max_health", "value": -0.05, "mode": "add" }
+  ],
+  "tags_granted": ["cluster:entropy"],
+  "tags_removed": [],
+  "corruption_weight": 0.5
+}
