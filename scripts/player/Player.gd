@@ -131,7 +131,7 @@ func die() -> void:
 
 # DEBUG
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept"):   # Enter key — test take_hit
-		take_hit(Vector2.RIGHT, 200.0)
+	if event.is_action_pressed("ui_accept"):   # Enter — test damage
+		$Health.take_damage(10.0, Vector2.RIGHT, 200.0)
 	if event.is_action_pressed("ui_cancel"):   # Escape — test die
-		die()
+		$Health.take_damage(999.0)
