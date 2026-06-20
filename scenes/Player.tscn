@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dm6r48uinqwea"]
+
+[ext_resource type="Script" uid="uid://dyxgajhyaupyh" path="res://scripts/player/Player.gd" id="1_p0vlq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5q5h1"]
+radius = 12.0
+height = 40.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5q5h1"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1722251323]
+script = ExtResource("1_p0vlq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=902582320]
+offset_left = -12.0
+offset_top = -20.0
+offset_right = 12.0
+offset_bottom = 20.0
+color = Color(0.6210711, 0.3953645, 0.22821093, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=903003755]
+shape = SubResource("CapsuleShape2D_5q5h1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1633078377]
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=539718345]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1928067742]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_5q5h1")

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://s11rmcbljmne"]
+
+[ext_resource type="PackedScene" uid="uid://dm6r48uinqwea" path="res://scenes/Player.tscn" id="1_lw1hy"]
+[ext_resource type="Script" uid="uid://dhpn6uxmb2efa" path="res://scripts/label.gd" id="1_tjlks"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lw1hy"]
+size = Vector2(800, 600)
+
+[node name="TestScene" type="Node2D" unique_id=249207371]
+
+[node name="Player" parent="." unique_id=1722251323 groups=["player"] instance=ExtResource("1_lw1hy")]
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=207661844]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1058470839]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1902079066]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=274617624]
+shape = SubResource("RectangleShape2D_lw1hy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1523230110]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1962779664]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 33.0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_tjlks")
