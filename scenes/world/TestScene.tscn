@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dm6r48uinqwea" path="res://scenes/Player.tscn" id="1_lw1hy"]
 [ext_resource type="Script" uid="uid://dhpn6uxmb2efa" path="res://scripts/label.gd" id="1_tjlks"]
+[ext_resource type="Script" uid="uid://cox7ost0lwdos" path="res://scripts/ui/HUD.gd" id="3_wpu2o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lw1hy"]
 size = Vector2(800, 600)
@@ -25,9 +26,24 @@ shape = SubResource("RectangleShape2D_lw1hy")
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1962779664]
 offset_left = 10.0
-offset_top = 10.0
+offset_top = 47.0
 offset_right = 50.0
-offset_bottom = 33.0
+offset_bottom = 70.0
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_tjlks")
+
+[node name="HUD" type="Control" parent="CanvasLayer" unique_id=514583398]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_wpu2o")
+
+[node name="HPBar" type="ProgressBar" parent="CanvasLayer/HUD" unique_id=1414711458]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 37.0
+value = 100.0
